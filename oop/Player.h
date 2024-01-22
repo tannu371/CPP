@@ -2,6 +2,7 @@
 
 #include<iostream>
 
+//  Include guards - insure that the file Player.h is included no more than once during any given compilation.
 #ifndef _PLAYER_H_
 #define _PLAYER_H_
 

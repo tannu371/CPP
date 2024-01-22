@@ -18,11 +18,13 @@ public:
     // Declaring Copy Constructor
     Account(const Account &source);
 
-    void set_balance(double bal);
+    void set_balance(double balance);
     double get_balance ();
 
     bool withdraw (double amount);
     bool deposit (double amount);
+
+    ~Account();
 };
 
 #endif 

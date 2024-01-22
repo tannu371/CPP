@@ -3,6 +3,10 @@
 #include <iostream>
 #include <string>
 
+// iostream is asserted to be in a standard include directory, while Player.h is asserted to be in the current working directory
+
+using namespace std;
+
 // Initialize static data
 int Player::num_players = 0;
 
@@ -40,7 +44,7 @@ Player::~Player() {
 
 // talk Method
 void Player :: talk (std::string text_to_say) {
-    std::cout << text_to_say << std::endl;              
+    cout << text_to_say << endl;              
 }
 
 // is_dead Method
