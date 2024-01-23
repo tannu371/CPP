@@ -7,10 +7,10 @@
 			"command": "/usr/bin/g++",
 			"args": [
 				"-fdiagnostics-color=always",
-				"-g",
+				"-gdwarf-2",
 				"-Wall",
 				"-std=c++17",
-				"${fileDirname}/main.cpp",
+				"${fileDirname}/*.cpp",
 				"-o",
 				"${fileDirname}/${fileBasenameNoExtension}"
 			],

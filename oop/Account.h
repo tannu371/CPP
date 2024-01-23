@@ -8,12 +8,13 @@
 #define _ACCOUNT_H_
 
 class Account {
-    std::string name;
-    double balance;
 
 public:
+    std::string name;
+    double balance;
+    
     // Constructor with default parameters
-    Account(std::string name = "None", double balance=0.0);
+    // Account(std::string name = "None", double balance=0.0);
 
     // Declaring Copy Constructor
     Account(const Account &source);
@@ -24,6 +25,8 @@ public:
     bool withdraw (double amount);
     bool deposit (double amount);
 
+    // no-arg constructor
+    Account();
     ~Account();
 };
 
