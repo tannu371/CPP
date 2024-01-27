@@ -1,33 +1,52 @@
 // Class Specification/Declaration
 
-#include <string>
-
 // Include Guards
 
 #ifndef _ACCOUNT_H_
 #define _ACCOUNT_H_
 
-class Account {
+#include <iostream>
+#include <string>
 
-public:
+using namespace std;
+
+class Account {
+    friend ostream &operator<<(ostream &os, const Account &account);
+
+private:
+    static constexpr const char* def_name = "Unnamed Account";
+    static constexpr double def_balance = 0.0;
+
+protected:
     std::string name;
     double balance;
-    
-    // Constructor with default parameters
-    // Account(std::string name = "None", double balance=0.0);
+
+public:
+    // no-args constructor (default)
+    // Account();
+
+    // constructor with default parameters (default) - Take care of all forms of initialiation
+    // Account(string name = "None", double balance=0.0);
+    Account(string name = def_name, double balance = def_balance);
+
+    // overloaded constructor
+    // Account(string name, double balance);
 
     // Declaring Copy Constructor
     Account(const Account &source);
 
     void set_balance(double balance);
-    double get_balance ();
+    double get_balance () const;
 
-    bool withdraw (double amount);
     bool deposit (double amount);
-
+    bool withdraw (double amount);
+    
     // no-arg constructor
-    Account();
+    // Account();
+
     ~Account();
 };
 
 #endif 
+
+// By default c++ uses static binding
